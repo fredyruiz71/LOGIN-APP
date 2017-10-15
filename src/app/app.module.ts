@@ -8,14 +8,17 @@ import {UsuariosService } from './servicios/usuarios.service';
 import { UsuarioComponent } from './usuario/usuario.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 import { LoginGuard } from './login.guard';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+//import { MdButtonModule, MdMenuModule, MdCardModule, MdToolbarModule, MdIconModule } from '@angular/material';
 
 
 
 const routes: Routes = [
   {path: 'login' , component: LoginComponent},
-  {path: 'usuarios' , component: UsuariosComponent},
-  {path: 'usuarios/:id' , component: UsuarioComponent}
+  {path: 'usuarios' , component: UsuariosComponent,canActivate: [LoginGuard]},
+  {path: 'usuarios/:id' , component: UsuarioComponent, canActivate: [LoginGuard]}
 ];
 
 @NgModule({
@@ -28,7 +31,15 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(routes)
+    HttpModule,
+    RouterModule.forRoot(routes),
+    BrowserAnimationsModule,
+    //MdButtonModule,
+    //MdMenuModule,
+    //MdCardModule,
+    //MdToolbarModule,
+    //MdIconModule
+ 
   ],
   providers: [UsuariosService, LoginGuard],
   bootstrap: [AppComponent]
