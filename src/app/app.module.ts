@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 import { RouterModule, Routes } from '@angular/router';
@@ -39,7 +38,11 @@ const routes: Routes = [
     //MdCardModule,
     //MdToolbarModule,
     //MdIconModule
- 
+
+
+
+
+
   ],
   providers: [UsuariosService, LoginGuard],
   bootstrap: [AppComponent]
