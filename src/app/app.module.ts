@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { LoginGuard } from './login.guard';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ShowofficialComponent } from './showofficial/showofficial.component';
 //import { MdButtonModule, MdMenuModule, MdCardModule, MdToolbarModule, MdIconModule } from '@angular/material';
 
 
@@ -17,7 +18,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 const routes: Routes = [
   {path: 'login' , component: LoginComponent},
   {path: 'usuarios' , component: UsuariosComponent,canActivate: [LoginGuard]},
-  {path: 'usuarios/:id' , component: UsuarioComponent, canActivate: [LoginGuard]}
+  {path: 'usuarios/:id' , component: UsuarioComponent, canActivate: [LoginGuard]},
+  {path: 'showofficial' , component: ShowofficialComponent, canActivate: [LoginGuard]},
 ];
 
 @NgModule({
@@ -25,7 +27,8 @@ const routes: Routes = [
     AppComponent,
     UsuariosComponent,
     UsuarioComponent,
-    LoginComponent
+    LoginComponent,
+    ShowofficialComponent
   ],
   imports: [
     BrowserModule,

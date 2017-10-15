@@ -5,3 +5,8 @@
     <a [routerLink]= "['/usuarios' , usuario.id]"> {{ usuario.nombre }}</a>
   </li>
   </ul>
+  <ul>
+    <li *ngFor="let usuarios1 of usuarioshowofficial">
+      <a [routerLink]= "['/showofficial' , usuarios1.id]"> {{ usuarios1.nombre }}</a>
+    </li>
+    </ul>

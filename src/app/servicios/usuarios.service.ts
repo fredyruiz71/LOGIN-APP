@@ -19,5 +19,7 @@ export class UsuariosService {
     return this.getUsuarios().find(usuario => usuario.id === id);
 
   }
-
+  getUsuario1(id: number) {
+    return this.getUsuarios().find(usuario1 => usuario1.id === id);
+}
 }
