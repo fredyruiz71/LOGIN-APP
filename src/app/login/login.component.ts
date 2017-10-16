@@ -15,12 +15,17 @@ export class LoginComponent implements OnInit {
   }
   login(form: NgForm) {
     console.log(form.value);
+    
 
-    if (form.value.email =='fredyruiz71@hotmail.com' && form.value.password == '9975956') {
+    if (form.value.email =='fredyruiz71@hotmail.com' && form.value.password == '123456') {
        localStorage.setItem('email', form.value.email);
        this.router.navigate( ['/usuarios']);
+
+
+       
     }
 
     
   }
 }
+

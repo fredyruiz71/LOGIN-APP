@@ -10,6 +10,8 @@ export class UsuariosService {
     {id: 4, nombre: 'Perifericos', Placa: 'PER-4755', Serie: 'NN2333' },
     {id: 5, nombre: 'UPS',Placa: 'UPS-8988', Serie: 'RTYE34' },
     
+    
+    
     ];
   constructor() { }
   getUsuarios()  {
@@ -20,6 +22,6 @@ export class UsuariosService {
 
   }
   getUsuario1(id: number) {
-    return this.getUsuarios().find(usuario1 => usuario1.id === id);
+   // return this.getUsuarios().find(usuarios => usuarios.usuario.id === id);
 }
 }

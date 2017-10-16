@@ -1,7 +1,15 @@
+
+<div class="login-form">
+    <h1>Login</h1>
+    <div class="form-group ">
+
 <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
     <input type="text" name="email" id="email" placeholder="Email" ngModel>
-    
+    <div>
     <input type="password" name="password" id="password" placeholder="password" ngModel>
-    <button type="submit">Login</button>
+</div>
+<div>
+    <button type="submit" class="log-btn" >Login</button>
+    
+</div>
    
-    </form>
